@@ -41,3 +41,20 @@ div{
     display: inline-flex;
     margin-right: 20px;
 }
+
+img{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+video{
+    width: 400px;
+    height: 710px;
+    left: 380px;
+    position: relative;
+    margin: 10px 5px;
+    border: 1px solid white;
+    
+}
