@@ -1,0 +1,43 @@
+.cabecera {
+    background: linear-gradient(to right, #7A6392, #8783D1e5);
+    width: 100vw;
+    height: 100px;
+    border-width: 3px;
+    box-shadow: 0 0 10px 1px #000;
+    top: 0;
+    position: sticky;
+    text-align: right;
+    display: inline-flexbox;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(#83343A, #3A171A);
+    color: white;
+    min-height: 100vh;
+}
+
+.NavBarButtoms {
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 20px;
+    text-decoration: none;
+    color:black;
+    
+
+}
+
+.NavBarButtoms:hover{
+    background-color: #D1ABAD22;
+    color: #483333;
+    border-radius: 10px;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+div{
+    display: inline-flex;
+    margin-right: 20px;
+}
