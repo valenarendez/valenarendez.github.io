@@ -5,16 +5,21 @@
     border-width: 3px;
     box-shadow: 0 0 10px 1px #000;
     top: 0;
-    position: sticky;
-    text-align: right;
-    display: inline-flexbox;
+    position:sticky;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    font-size: 0.9em;
+    
 }
+
 
 body{
     margin: 0;
     background: linear-gradient(#83343A, #3A171A);
     color: white;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .NavBarButtoms {
@@ -52,9 +57,90 @@ img{
 video{
     width: 400px;
     height: 710px;
-    left: 380px;
-    position: relative;
+    object-fit: cover;
     margin: 10px 5px;
     border: 1px solid white;
+    
+}
+
+.ul-navbar {
+    display: flex; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+    margin-left: auto;
+    padding-left: 100px;
+}
+
+.video-cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    max-width: 1280px;
+    margin: auto;
+}
+
+li{
+    margin-top: 5px;
+}
+
+.descripcion{
+    display: inline;
+    text-align: center;
+}
+
+.categoria{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
+    color:wheat;
+    padding: 0 50px;
+    display: inline-block;
+}
+
+.categoria:hover{
+    color: white;
+}
+.lista-categoria{
+    width: 100%;
+    display: flex;
+    padding: 0px 10px;
+    margin: 0 10px;
+    list-style: none;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    max-width: 80%;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.sublista {
+    display: none; 
+    list-style: none; 
+    padding: 0;
+    position: absolute; 
+    left: 100px; 
+    top: 100%; 
+    background-color: #eee9; 
+    border: 1px solid #ccc; 
+    z-index: 1000;
+}
+
+.sublista li {
+    padding: 10px;
+}
+
+.sublista li a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.contactanos{
+    text-align: center;
     
 }
