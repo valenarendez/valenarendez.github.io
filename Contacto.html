@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de contacto</title>
+    <title>Contacto</title>
+
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class = 'cabecera'>
@@ -12,12 +14,50 @@
             <li><a class ="NavBarButtoms" href = "Principal.html">Inicio </a></li>
             <li><a class ="NavBarButtoms" href = "productos.html">Productos </a></li>
             <li><a class ="NavBarButtoms" href="Contacto.html">Contactanos</a></li>
-            <li><img src="Imagenes/logo dibukids.jpg" alt=""></li>
+            <li><img src="Imagenes/logodibukids.jpg" alt=""></li>
         </ul>
     </header>
-    <form>
-        <h1 class="contactanos">Queres hablar con nosotros? Llama a <strong>DANIELA! 2657661979</strong></h1>
 
-    </form>
+    <div class="contactanos">
+        
+        <div class="box-info">
+            <h1>CONTÁCTATE CON NOSOTROS</h1>
+            
+            <div class="data">
+                <p><i class="fa-solid fa-phone"></i> +54 9 2665 181909 - Daniela </p>
+                <p><i class="fa-solid fa-envelope"></i> dinokids@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> San Luis - Villa Mercedes </p>
+            </div>
+            
+            <div class="links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <form>
+            <div class="input-box">
+                <input type="text" placeholder="Nombre y apellido" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="email" required placeholder="Correo electrónico">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Asunto">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+
+            <div class="input-box">
+                <textarea placeholder="Escribe tu motivo..."></textarea>
+            </div>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </div>
+
 </body>
 </html>
