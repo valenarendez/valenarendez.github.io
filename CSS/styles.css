@@ -21,7 +21,7 @@ body{
     background: linear-gradient(#e6cfcb, #8b1620);
     color: white;    
     overflow-x: hidden;
-    
+    font-family: sans-serif;
 }
 
 .NavBarButtoms {
