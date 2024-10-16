@@ -10,7 +10,7 @@ body, html{
 
 /*Barra de navegacion*/
 .navbar {
-    background: linear-gradient(to right, #f7d79c, #7c78d1e5);
+    background: linear-gradient(to right,  #fad97df1, #06ebb2a6);
     width: 100vw;
     height: 100px;
     border-width: 3px;
@@ -24,13 +24,13 @@ body, html{
     
 }
 
-
 .navbar__item {
     display: inline-block;
     font-size: 2.5em;
     margin: 20px;
     text-decoration: none;
     color:black;
+    font-weight: 700;
 }
 .navbar__ul {
     display: flex; 
@@ -42,9 +42,7 @@ body, html{
 }
 
 .navbar__item:hover{
-    background-color: #8a0c1222;
-    color: #682727;
-    border-radius: 15px;
+    color: #fbff00;
 }
 
 .navbar__img{

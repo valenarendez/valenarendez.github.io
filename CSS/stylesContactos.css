@@ -1,5 +1,6 @@
-.cabecera {
-    background: linear-gradient(to right, #f7d79c, #7c78d1e5);
+/*Barra de navegacion*/
+.navbar {
+    background: linear-gradient(to right,  #fad97df1, #06ebb2a6);
     width: 100vw;
     height: 100px;
     border-width: 3px;
@@ -13,50 +14,15 @@
     
 }
 
-
-body, html{   
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: linear-gradient(#e6cfcb, #8b1620);
-    color: white;    
-    overflow-x: hidden;
-    font-family: sans-serif;
-}
-
-.NavBarButtoms {
+.navbar__item {
     display: inline-block;
     font-size: 2.5em;
     margin: 20px;
     text-decoration: none;
     color:black;
-    
-
+    font-weight: 700;
 }
-
-.NavBarButtoms:hover{
-    background-color: #8a0c1222;
-    color: #682727;
-    border-radius: 15px;
-}
-
-p{
-    font-size: 1.5em;
-}
-
-div{
-    display: inline-flex;
-    margin-right: 20px;
-}
-
-img{
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.ul-navbar {
+.navbar__ul {
     display: flex; 
     list-style: none; 
     padding: 0; 
@@ -64,195 +30,114 @@ img{
     margin-left: auto;
     padding-left: 100px;
 }
-/*FORUMULARIO DE CONTACTO*/
 
-.contactanos{
-        display:grid;
-        grid-template-columns:  1fr 1fr;
-        padding:20px;
-        gap: 20px;
-        width: 80%;
-        text-align: center;   
-        justify-content: space-between;
-        align-items: flex-start;
-        max-width: 1200px;
-        margin: 0 auto;
-        border-radius: 20px;
-}
-.box-info, form {
-    width: 100%; 
+.navbar__item:hover{
+    color: #fbff00;
 }
 
-.box-info {
-    color:#fff;
-    display:grid;
-    flex-direction: column;
-    gap:20px;
-    grid-auto-rows: min-content;
-    padding-right: 20px;
+.navbar__img{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.box-info > h1 {
-    text-align: left;
-    letter-spacing: 3px;
-    font-size: 4rem;
-   
-}
+  body {
+    background: url('Imagenes/contacto/fondo.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Verdana', sans-serif;
+    margin: 0; 
+  }
 
-.data {
+  /*FORMULARIO*/
+
+.contactanos {
     display: flex;
-    flex-direction: column;
-    gap:20px;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    width: 80%;
+    margin: 60px auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; 
 }
 
-.data > p {
-    font-size: 2rem;
+/* Estilos para la información de contacto */
+.info {    
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 55%; 
+}
+
+.info h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #0a8f46;
+}
+
+.info .datos p {
+    font-size: 1.8rem;
+    margin: 10px 2;
+}
+.icon{
+    width: 30px;
+    padding-right: 15px;
+    height: 30px;
+}
+.info .links {
+
     display: flex;
-    align-items: center; 
+    justify-content: start;  
+    margin-top: 20px;        
+    
+}
+.info .links a {
+    text-decoration: none;    
+    background-color: #3b5998; 
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 10px;       
+    width: 40px;              
+    height: 40px;
+    display: flex;
+    margin: 0 auto;
 }
 
-.data > p > i {
-    color:crimson;
-    margin-right: 15px;
-    font-size:2rem;
+.info .links a:hover {
+    background-color: #1da1f2; 
 }
 
-.links {
-    display:flex;
-    gap:15px;
-}
-
-.links > a {
-    text-decoration: none;
-    width: 80px;
-    height: 50px;
-    background: crimson;
-    text-align:center;
-    transition: .1s;
-}
-
-.links > a > i {
-    color:#fff;
-    line-height: 50px;
-    font-size: 30px;
-}
-
+/* Estilos para el formulario */
 form {
-    margin-top: 130px;
-    display:grid;
-    grid-auto-rows: min-content;
+    display: grid;
+    gap: 25px;
     flex-direction: column;
-    text-align: center;
-    gap:35px;
+    width: 50%;
 }
 
-.input-box {
-    position:relative;
-}
-
-.input-box > input {
-    width: 100%;
-    height: 25px;
-    padding: 18px;
-    outline:none;
-    background: rgba(255 255 255 / .1);
-    border:4px solid transparent;
-    letter-spacing: 3px;
-    transition:.8s;
-    color:#fff;
-    font-size: 1.3rem;
-}
-
-.input-box > input::placeholder,
-.input-box > textarea::placeholder {
-    color:#1d1515;
-    
-}
-
-.input-box > input:focus:placeholder,
-.input-box > textarea:focus:placeholder {
-    color:transparent;
-}
-
-.input-box > input:focus,
-.input-box > textarea:focus {
-    border-bottom:5px solid crimson;
-    animation: shake .6s;
-}
-
-.input-box > textarea {
-    width: 100%;
-    height: 130px;
-    padding: 10px;
-    background: rgba(255 255 255 / .1);
-    border:3px solid transparent;
-    letter-spacing: 1px;
-    outline: none;
-    transition:.3s;
-    color:#fff;
-    letter-spacing: 3px;
-    font-size: 1.3rem;
-}
-
-
-.input-box > i {
-    position:absolute;
-    top:50%;
-    transform: translateY(-50%);
-    right: 10px;
-    color:rgba(255 255 255 / .3);
-    transition: .3s;
-    font-size: 1.5rem;
-}
-
-.input-box > input:focus ~ i {
-    color:crimson;
-}
-
-form > button {
-    width: 100%;
+.inputt input, .inputt textarea {
+    width: 90%;
     padding: 15px;
-    outline: none;
-    background: crimson;
-    color:#fff;
-    border:none;
-    transition: .1s;
+    font-size: 1.6em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button {
+    padding: 15px;
+    background-color: #0051ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1.rem;
+    font-size: 1.7rem;
 }
 
-form > button:hover,
-.links > a:hover {
-    background: rgb(172, 16, 47);
-}
-
-@keyframes shake { 
-    0%, 100% {transform: translateX(0);} 
-    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} 
-    20%, 40%, 60%, 80% {transform: translateX(10px);} 
- }
-
-
-@media screen and (max-width:600px) {
-    .container {
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        gap:20px;
-        grid-template-columns: 1fr; 
-    }
-
-    .box-info {
-        gap:15px;
-        padding-right: 0;
-        text-align: center;
-    }
-
-    .box-info > h1 {
-        font-size: 1.5rem;
-    }
-    
-    form {
-        width: 100%;
-    }
+button:hover {
+    background-color: #0056b3;
 }
