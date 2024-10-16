@@ -91,6 +91,22 @@ body, html{
     
 }
 
+.blockvideo__button{
+    height: 50px;
+    position: absolute;
+    z-index: 5000;
+    top: 500px;
+    display: inline-block;
+}
+
+.blockvideo__button:first-child{
+    left: 100px;
+}
+
+.blockvideo__button:last-child{
+    right: 100px;
+}
+
 
 
 
