@@ -7,22 +7,25 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class = 'cabecera'>
-        <ul class="ul-navbar">
-            <li><a class ="NavBarButtoms" href = "Principal.html">Inicio </a></li>
-            <li><a class ="NavBarButtoms" href = "productos.html">Productos</a></li>
-            <li><a class ="NavBarButtoms" href="Contacto.html">Contactanos</a></li>
-            <li><img src="Imagenes/logodibukids.jpg" alt=""></li>
+    <!-- Barra de navegacion -->
+    <header class = 'navbar'>
+        <ul class="navbar__ul">
+            <li><a class ="navbar__item" href = "Principal.html">Inicio </a></li>
+            <li><a class ="navbar__item" href = "productos.html">Productos</a></li>
+            <li><a class ="navbar__item" href="Contacto.html">Contactanos</a></li>
+            <li><img class="navbar__img" src="Imagenes/logodibukids.jpg" alt=""></li>
         </ul>
     </header>
+    <!-- Breve descripcion -->
     <div class="descripcion">
-        <h2>DibuKids!</h2>
-        <p>Tienda de uniformes y ropa informal para niños y adolecentes</p>
+        <h2 class="descripcion__titulo">DibuKids!</h2>
+        <p class="descripcion__parrafo">Tienda de uniformes y ropa informal para niños y adolecentes</p>
     </div>
-    <div class="video-cont">
-        <video autoplay muted src="Videos/Video1.mp4" loop ></video>
-        <video autoplay muted src="Videos/Video2.mp4" loop ></video>
-        <video autoplay muted src="Videos/Video3.mp4" loop ></video>
+    <!-- Contenedor de video y videos -->
+    <div class="blockvideo">
+        <video class="blockvideo__item" autoplay muted src="Videos/Video1.mp4" loop ></video>
+        <video class="blockvideo__item" autoplay muted src="Videos/Video2.mp4" loop ></video>
+        <video class="blockvideo__item" autoplay muted src="Videos/Video3.mp4" loop ></video>
     </div>
     
 </body>

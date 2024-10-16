@@ -54,45 +54,47 @@ body, html{
     left: 0;
 }
 
+/*Catalogo*/
 
-/*Descripcion y titulo*/
-.descripcion{
-    text-align: center;
-    margin-right: 20px;
-}
-
-.descripcion__parrafo{
-    margin: 0;
-    font-size: 1.5em;
-}
-
-.descripcion__titulo{
-    margin: 10px;
-    font-size: 2.5em;
-}
-
-/*Contenedor video*/
-.blockvideo{
+.catalogo {
+    list-style: none;
+    padding: 0;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 1280px;
-    margin: auto;
+    max-width: 80%;
+}
+.catalogo > li {
+    position: relative;
 }
 
-.blockvideo__item{
-    width: 400px;
-    height: 710px;
-    object-fit: cover;
-    margin: 10px 5px;
-    border: 1px solid white;
-    flex-shrink: 3;
-    
+.catalogo__item{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
+    color:wheat;
+    padding: 0 50px;
+    display: inline-block;
 }
 
+.catalogo__item:hover{
+    color: white;
+}
 
+.catologo__subitem {
+    display: none; 
+    list-style: none; 
+    padding: 0;
+    position: absolute; 
+    left: 100px; 
+    top: 100%; 
+    background-color: #eee9; 
+    border: 1px solid #ccc; 
+    z-index: 1000;
+}
 
+.catologo__subitem li {
+    padding: 10px;
+}
 
-
-
+.catologo__subitem li a {
+    color: black; 
+    text-decoration: none; 
+}

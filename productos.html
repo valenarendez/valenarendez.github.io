@@ -4,97 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articulos</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesProductos.css">
 </head>
 <body>
-    <header class = 'cabecera'>
-        <ul class="ul-navbar">
-            <li><a class ="NavBarButtoms" href = "Principal.html">Inicio </a></li>
-            <li><a class ="NavBarButtoms" href = "productos.html">Productos </a></li>
-            <li><a class ="NavBarButtoms" href="Contacto.html">Contactanos</a></li>
-            <li><img src="Imagenes/logodibukids.jpg" alt=""></li>
+    <!-- Barra de navegacion -->
+    <header class = 'navbar'>
+        <ul class="navbar__ul">
+            <li><a class ="navbar__item" href = "Principal.html">Inicio </a></li>
+            <li><a class ="navbar__item" href = "productos.html">Productos</a></li>
+            <li><a class ="navbar__item" href="Contacto.html">Contactanos</a></li>
+            <li><img class="navbar__img" src="Imagenes/logodibukids.jpg" alt=""></li>
         </ul>
+    <!-- Catalogo -->    
     </header>
     <h2>Conoce nuestros productos:</h2>
-    <ul class="menu">
+    <ul class="catalogo">
         <li>
-            <a class="categoria" href="#">Uniformes</a>
-            <ul class="sublista">
+            <a class="catalogo__item" href="#">Uniformes</a>
+            <ul class="catalogo__subitem">
                 <li><a href="#">Uniforme Escolar</a></li>
                 <li><a href="#">Uniforme Deportivo</a></li>
             </ul>
         </li>
         <li>
-            <a class="categoria" href="#">Para Ellas</a>
-            <ul class="sublista">
+            <a class="catalogo__item" href="#">Para Ellas</a>
+            <ul class="catalogo__subitem">
                 <li><a href="#">Ropa de Moda</a></li>
                 <li><a href="#">Accesorios</a></li>
             </ul>
         </li>
         <li>
-            <a class="categoria" href="#">Para Ellos</a>
-            <ul class="sublista">
+            <a class="catalogo__item" href="#">Para Ellos</a>
+            <ul class="catalogo__subitem">
                 <li><a href="#">Camisas</a></li>
                 <li><a href="#">Pantalones</a></li>
             </ul>
         </li>
         <li>
-            <a class="categoria" href="#">Juguetes</a>
-            <ul class="sublista">
+            <a class="catalogo__item" href="#">Juguetes</a>
+            <ul class="catalogo__subitem">
                 <li><a href="#">Juguetes Educativos</a></li>
                 <li><a href="#">Muñecos</a></li>
             </ul>
         </li>
         <li>
-            <a class="categoria" href="#">Varios</a>
-            <ul class="sublista">
+            <a class="catalogo__item" href="#">Varios</a>
+            <ul class="catalogo__subitem">
                 <li><a href="#">Artículos de Oficina</a></li>
                 <li><a href="#">Decoración</a></li>
             </ul>
         </li>
     </ul>
     <p>Ropa de la mas alta calidad traida desde narnia para que tu hij@ siempre tenga lo mas lindo en todo momento y lugar!
-        <script>
-           document.querySelectorAll('.menu > li > .categoria').forEach(item => {
-            item.addEventListener('click', function(event) {
-                event.preventDefault(); // Evitar el comportamiento por defecto del enlace
-                
-                // Cerrar otras sublistas
-                document.querySelectorAll('.sublista').forEach(sub => {
-                    if (sub !== this.nextElementSibling) {
-                        sub.style.display = 'none'; // Ocultar sublistas abiertas
-                    }
-                });
-
-                const sublista = this.nextElementSibling; // Obtener la sublista correspondiente
-                if (sublista) {
-                    // Alternar la visibilidad de la sublista
-                    sublista.style.display = sublista.style.display === 'block' ? 'none' : 'block';
-                }
-            });
-        });
-
-        // Cerrar sublistas al hacer clic en cualquier parte del body
-        document.addEventListener('click', function(event) {
-            const isClickInsideMenu = event.target.closest('.menu');
-            if (!isClickInsideMenu) {
-                // Si el clic fue fuera del menú, ocultar todas las sublistas
-                document.querySelectorAll('.sublista').forEach(sub => {
-                    sub.style.display = 'none';
-                });
-            }
-        });
-
-        // Cerrar sublistas al hacer clic en cualquier parte del body
-        document.addEventListener('click', function(event) {
-            const isClickInsideMenu = event.target.closest('.menu');
-            if (!isClickInsideMenu) {
-                // Si el clic fue fuera del menú, ocultar todas las sublistas
-                document.querySelectorAll('.sublista').forEach(sub => {
-                    sub.style.display = 'none';
-                });
-            }
-        });
-        </script>
+        
 </body>
 </html>
