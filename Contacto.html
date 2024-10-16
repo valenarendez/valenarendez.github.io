@@ -9,55 +9,58 @@
     <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class = 'cabecera'>
-        <ul class="ul-navbar">
-            <li><a class ="NavBarButtoms" href = "Principal.html">Inicio </a></li>
-            <li><a class ="NavBarButtoms" href = "productos.html">Productos </a></li>
-            <li><a class ="NavBarButtoms" href="Contacto.html">Contactanos</a></li>
-            <li><img src="Imagenes/logodibukids.jpg" alt=""></li>
+    <!-- Barra de navegacion -->
+    <header class = 'navbar'>
+        <ul class="navbar__ul">
+            <li><a class ="navbar__item" href = "Principal.html">Inicio </a></li>
+            <li><a class ="navbar__item" href = "productos.html">Productos</a></li>
+            <li><a class ="navbar__item" href="Contacto.html">Contactanos</a></li>
+            <li><img class="navbar__img" src="Imagenes/logodibukids.jpg" alt=""></li>
         </ul>
     </header>
 
     <div class="contactanos">
-        
-        <div class="box-info">
-            <h1>CONTÁCTATE CON NOSOTROS</h1>
-            
-            <div class="data">
-                <p><i class="fa-solid fa-phone"></i> +54 9 2665 181909 - Daniela </p>
-                <p><i class="fa-solid fa-envelope"></i> dibukids@gmail.com</p>
-                <p><i class="fa-solid fa-location-dot"></i> San Luis - Villa Mercedes </p>
+
+        <div class="info">
+            <h1>COMUNICATE CON NOSOTROS</h1>
+    
+            <div class="datos">
+                <p> <img src="Imagenes/contacto/whatsapp_black_logo_icon_147050.png" alt="wsp" class="icon" >+54 9 2665 181909 - Daniela </p>
+                <p><img src="Imagenes/contacto/gmail_icon-icons.com_59877.png" alt="gmail" class="icon"> dibukids@gmail.com </p>
+                <p> <img src="Imagenes/contacto/location_icon-icons.com_50109.png" alt="ubicación" class="icon">San Luis - Villa Mercedes </p>
             </div>
-            
+    
             <div class="links">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank" ><img src="Imagenes/contacto/facebook.png" alt="facebook"> </a>
+                <a href="https://instagram.com" target="_blank"><img src="Imagenes/contacto/social.png" alt="instagram"> </a>
+                <a href="https://twitter.com" target="_blank"><img src="Imagenes/contacto/logotipos.png" alt="twitter"> </a>
             </div>
         </div>
-
-        <form>
-            <div class="input-box">
-                <input type="text" placeholder="Nombre y apellido" required>
-                <i class="fa-solid fa-user"></i>
+    
+        <form id="contact">
+            <div class="inputt">
+                <input type="text" id="name" placeholder="Nombre y apellido" required>
             </div>
-            <div class="input-box">
-                <input type="email" required placeholder="Correo electrónico">
-                <i class="fa-solid fa-envelope"></i>
+            <div class="inputt">
+                <input type="email" id="email" required placeholder="Correo electrónico">                
             </div>
 
-            <div class="input-box">
-                <input type="text" placeholder="Asunto" required>
-                <i class="fa-solid fa-pen-to-square"></i>
+            <div class="inputt">
+                <input type="tel" id="numero" placeholder="Teléfono" required>                
             </div>
-
-            <div class="input-box">
-                <textarea placeholder="Escribe tu mensaje..."></textarea>
+    
+            <div class="inputt">
+                <input type="text" id="asunto" placeholder="Asunto" required>                
             </div>
-
+    
+            <div class="inputt">
+                <textarea id="message" placeholder="Escribe tu mensaje..." required></textarea>
+            </div>
+    
             <button type="submit">Enviar mensaje</button>
         </form>
-    </div>
+
+       </div>
 
 </body>
 </html>
