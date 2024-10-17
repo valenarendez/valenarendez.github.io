@@ -1,0 +1,99 @@
+body, html{   
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(#A76285, #FDCA9B);
+    color: white;    
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+/*Barra de navegacion*/
+.navbar {
+    background: linear-gradient(to right,  #fad97df1, #ccc);
+    width: 100vw;
+    height: 100px;
+    border-width: 3px;
+    box-shadow: 0 0 10px 1px #000;
+    top: 0;
+    position:sticky;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    font-size: 0.9em;
+    font-family: 'Verdana', sans-serif;
+    
+}
+
+.navbar__item {
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 20px;
+    text-decoration: none;
+    color:black;
+    font-weight: 700;
+}
+.navbar__ul {
+    display: flex; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+    margin-left: auto;
+    padding-left: 100px;
+}
+
+.navbar__item:hover{
+    color: #fbff00;
+}
+
+.navbar__img{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Catalogo*/
+
+.catalogo {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    max-width: 80%;
+}
+.catalogo > li {
+    position: relative;
+}
+
+.catalogo__item{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
+    color:wheat;
+    padding: 0 50px;
+    display: inline-block;
+}
+
+.catalogo__item:hover{
+    color: white;
+}
+
+.catologo__subitem {
+    display: none; 
+    list-style: none; 
+    padding: 0;
+    position: absolute; 
+    left: 100px; 
+    top: 100%; 
+    background-color: #eee9; 
+    border: 1px solid #ccc; 
+    z-index: 1000;
+}
+
+.catologo__subitem li {
+    padding: 10px;
+}
+
+.catologo__subitem li a {
+    color: black; 
+    text-decoration: none; 
+}
