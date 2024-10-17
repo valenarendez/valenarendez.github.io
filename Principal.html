@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio dibu kids!</title>
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
     <!-- Barra de navegacion -->
@@ -23,13 +22,45 @@
         <p class="descripcion__parrafo">Tienda de uniformes y ropa informal para niños y adolecentes</p>
     </div>
     <!-- Contenedor de video y videos -->
-    <div class="blockvideo">
-        <button class="blockvideo__button"  type="button"><</button>
-        <video class="blockvideo__item" autoplay muted src="Videos/Video1.mp4" loop ></video>
-        <video class="blockvideo__item" autoplay muted src="Videos/Video2.mp4" loop ></video>
-        <video class="blockvideo__item" autoplay muted src="Videos/Video3.mp4" loop ></video>
-        <button class="blockvideo__button"  type="button">></button>
+     <div class = "blockvideo">
+        <div class="blockvideo__desvanecedor">
+            <button class="blockvideo__button"  type="button"><</button>
+            <video class="blockvideo__item" autoplay muted src="Videos/Video1.mp4" loop ></video>
+            <video class="blockvideo__item" autoplay muted src="Videos/Video2.mp4" loop ></video>
+            <video class="blockvideo__item" autoplay muted src="Videos/Video3.mp4" loop ></video>
+            <button class="blockvideo__button"  type="button">></button>
+        </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    let currentOrder = 0; // Mantiene el índice del video actual
+    const videos = document.querySelectorAll('.blockvideo__item');
+    const totalVideos = videos.length;
+
+    function updateVideoOrder() {
+        videos.forEach((video, index) => {
+            const newIndex = (index + currentOrder + totalVideos) % totalVideos;
+            video.style.order = newIndex; // Cambia el orden del video
+        });
+    }
+
+    function handleChangeOrder(increment) {
+        currentOrder = (currentOrder + increment + totalVideos) % totalVideos; // Actualiza el índice
+        updateVideoOrder(); // Actualiza el orden de los videos
+    }
+
+    document.querySelector('.blockvideo__button:last-child').addEventListener('click', () => {
+        handleChangeOrder(1); // Cambia al siguiente video
+    });
+
+    document.querySelector('.blockvideo__button:first-child').addEventListener('click', () => {
+        handleChangeOrder(-1); // Cambia al video anterior
+    });
+
+    // Inicializa el orden
+    updateVideoOrder();
+});
+    </script>
     
 </body>
 </html>

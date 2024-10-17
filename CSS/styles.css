@@ -2,7 +2,7 @@ body, html{
     margin: 0;
     padding: 0;
     height: 100%;
-    background: linear-gradient(#e6cfcb, #8b1620);
+    background: linear-gradient(#A76285, #FDCA9B);
     color: white;    
     overflow-x: hidden;
     font-family: sans-serif;
@@ -10,7 +10,7 @@ body, html{
 
 /*Barra de navegacion*/
 .navbar {
-    background: linear-gradient(to right,  #fad97df1, #06ebb2a6);
+    background: linear-gradient(to right,  #fad97df1, #ccc);
     width: 100vw;
     height: 100px;
     border-width: 3px;
@@ -31,6 +31,7 @@ body, html{
     text-decoration: none;
     color:black;
     font-weight: 700;
+    font-family: 'Verdana', sans-serif;
 }
 .navbar__ul {
     display: flex; 
@@ -70,12 +71,11 @@ body, html{
 
 /*Contenedor video*/
 .blockvideo{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     max-width: 1280px;
     margin: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .blockvideo__item{
@@ -85,23 +85,58 @@ body, html{
     margin: 10px 5px;
     border: 1px solid white;
     flex-shrink: 3;
+    order: 2;
+    transition: transform 0.5s ease, order 0s ease;
     
 }
 
-.blockvideo__button{
+.blockvideo__item:first-child{
+    order:1;
+}
+
+.blockvideo__item:last-child{
+    order: 3;
+}
+
+.blockvideo__button {
     height: 50px;
     position: absolute;
-    z-index: 5000;
-    top: 500px;
-    display: inline-block;
+    z-index: 500;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: none;
+    color: black;
+    font-size: 2em;
+    cursor: pointer;
 }
 
-.blockvideo__button:first-child{
-    left: 100px;
+.blockvideo__button:first-child {
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.blockvideo__button:last-child{
-    right: 100px;
+.blockvideo__button:last-child {
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.blockvideo__desvanecedor {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display:flex;
+    width: 100%;
+    height: 80%
+}
+
+.blockvideo__desvanecedor::before {
+    content: '';
+    position: absolute;
+    width: 1240px;
+    height: 100%;
+    background: linear-gradient(to right, #000e 20%, transparent, #000e 80%);
+    z-index: 10;
+    pointer-events: none;
+    border-radius: 10px;
 }
 
 
