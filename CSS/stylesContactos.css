@@ -3,7 +3,7 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment:fixed;
-    font-family: 'Verdana', sans-serif;
+    font-family: nonito;
     margin: 0; 
 
     }
@@ -32,6 +32,8 @@ body{
     text-decoration: none;
     color:black;
     font-weight: 700;
+    font-family: nonito;
+    
 }
 .navbar__ul {
     display: flex; 
@@ -89,6 +91,10 @@ body{
     width: 30px;
     padding-right: 15px;
     height: 30px;
+}
+
+.info{
+    font-weight: 700;
 }
 .info .links {
 

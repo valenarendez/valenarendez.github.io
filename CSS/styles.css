@@ -5,7 +5,7 @@ body, html{
     background: linear-gradient(#A76285, #FDCA9B);
     color: white;    
     overflow-x: hidden;
-    font-family: sans-serif;
+    font-family: nonito;
 }
 
 /*Barra de navegacion*/
@@ -31,7 +31,7 @@ body, html{
     text-decoration: none;
     color:black;
     font-weight: 700;
-    font-family: 'Verdana', sans-serif;
+    font-family: nonito;
 }
 .navbar__ul {
     display: flex; 
@@ -69,6 +69,10 @@ body, html{
     font-size: 2.5em;
 }
 
+span{
+    font-family: cursiva;
+    font-weight: 800;
+}
 #titulo span:nth-child(1) {
     color: #FF6F61;
 }
@@ -178,6 +182,37 @@ body, html{
 
 
 
+/*Seccion*/
+.blocksection{
+    color: #000;
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+.blocksection__parrafo{
+    font-family: monserrat;
+    font-weight: 400;
+}
 
 
+/*Footer*/
+.piepagina{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-basis: auto;
+    border: 3px solid black;
+    justify-content: space-between;
+    margin: 30px;
+    height: 220px;
+    
+}
 
+.piepagina__titulo{
+    flex-basis: 190px;
+    border-bottom: 4px solid white;
+}
+
+.piepagina__subcaja{
+    padding: 0 20px;
+}
