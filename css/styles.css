@@ -119,8 +119,9 @@ span{
 }
 
 .blockvideo__item{
-    width: 400px;
-    height: 710px;
+    width: 100%px;
+    max-width: 400px;
+    height: auto;
     object-fit: cover;
     margin: 10px 5px;
     border: 1px solid white;
@@ -179,7 +180,17 @@ span{
     pointer-events: none;
     border-radius: 10px;
 }
+@media (max-width: 600px) {
+    .blockvideo__desvanecedor {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .blockvideo__item {
+        width: 100%;
+        height: auto;
+    }
+}
 
 
 /*Seccion*/
@@ -204,7 +215,7 @@ span{
     border: 3px solid black;
     justify-content: space-between;
     margin: 30px;
-    height: 220px;
+    
     
 }
 
@@ -215,4 +226,14 @@ span{
 
 .piepagina__subcaja{
     padding: 0 20px;
+    border-left: 5px groove white;
 }
+
+.piepagina__subcaja:first-child{
+    border-left: none;
+}
+
+
+
+
+
