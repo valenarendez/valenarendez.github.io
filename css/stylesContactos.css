@@ -4,7 +4,8 @@ body{
     background-position: center;
     background-attachment:fixed;
     font-family: nonito;
-    margin: 0; 
+    margin: 0;
+     
 
     }
     
@@ -13,7 +14,7 @@ body{
 .navbar {
     background: linear-gradient(to right,  #fad97df1, #ccc);
     width: 100vw;
-    height: 100px;
+    min-height: 100px;
     border-width: 3px;
     box-shadow: 0 0 10px 1px #000;
     top: 0;
@@ -42,6 +43,7 @@ body{
     margin: 0;
     margin-left: auto;
     padding-left: 100px;
+    flex-wrap: wrap;
 }
 
 .navbar__item:hover{
@@ -59,28 +61,36 @@ body{
 
 .contactanos {
     display: flex;
-    grid-template-columns: 1fr 1fr; 
+    flex-direction: row;
+    overflow: visible;
     gap: 20px;
     width: 80%;
     margin: 60px auto;
     background-color: #f7f7f7;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    justify-content: space-between; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    flex-wrap: wrap;
+    
 }
 
 /* Estilos para la información de contacto */
 .info {    
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    width: 55%; 
+    min-width: 200px; 
+    
+    
 }
+
 
 .info h1 {
     font-size: 3em;
     margin-bottom: 20px;
     color: #0a8f46;
+    flex-shrink: 1;
 }
 
 .info .datos p {
@@ -121,15 +131,27 @@ body{
 
 /* Estilos para el formulario */
 form {
-    display: grid;
-    gap: 25px;
+    display: flex;
+    min-width: 200px;
+    flex-wrap: wrap;
     flex-direction: column;
-    width: 50%;
+    gap: 25px;
+    flex-grow: 1;
+    flex-basis: 1;
+}
+
+#contact{
+    display: flex;
+    min-width: 300px;
+    flex-wrap: wrap;
+    flex-direction: column;
+   
 }
 
 .inputt input, .inputt textarea {
-    width: 90%;
+    width: 80%;
     padding: 15px;
+    margin: 5px;
     font-size: 1.6em;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -144,8 +166,23 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.7rem;
+    margin: 5px;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 450px) {
+   
+    .contactanos {
+        font-size: 0.7em;
+    }
+
+    form{
+        overflow: hidden;
+    }
+
+
+    
 }

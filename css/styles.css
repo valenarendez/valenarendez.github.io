@@ -12,7 +12,7 @@ body, html{
 .navbar {
     background: linear-gradient(to right,  #fad97df1, #ccc);
     width: 100vw;
-    height: 100px;
+    min-height: 100px;
     border-width: 3px;
     box-shadow: 0 0 10px 1px #000;
     top: 0;
@@ -21,7 +21,6 @@ body, html{
     justify-content: space-between;
     z-index: 1000;
     font-size: 0.9em;
-    
 }
 
 .navbar__item {
@@ -32,6 +31,7 @@ body, html{
     color:black;
     font-weight: 700;
     font-family: nonito;
+    
 }
 .navbar__ul {
     display: flex; 
@@ -40,6 +40,7 @@ body, html{
     margin: 0;
     margin-left: auto;
     padding-left: 100px;
+    flex-wrap: wrap;
 }
 
 .navbar__item:hover{
@@ -112,11 +113,15 @@ span{
 /*Contenedor video*/
 .blockvideo{
     justify-content: space-evenly;
-    max-width: 1280px;
+    max-width: 1240px;
     margin: auto;
     position: relative;
     z-index: 1;
+    container-type: inline-size;
+    container-name: cajavideo;
 }
+
+
 
 .blockvideo__item{
     width: 100%px;
@@ -180,17 +185,52 @@ span{
     pointer-events: none;
     border-radius: 10px;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 1230px) {
     .blockvideo__desvanecedor {
-        flex-direction: column;
         align-items: center;
     }
 
     .blockvideo__item {
-        width: 100%;
+        width: 300px;
         height: auto;
+        flex-grow: 1;
+    }
+    .blockvideo__desvanecedor::before {
+        background: linear-gradient(to right, #000e 10%, transparent, #000e 70%);
     }
 }
+
+@media (max-width: 935px) {
+    .blockvideo__desvanecedor {
+        align-items: center;
+    }
+
+    .blockvideo__item {
+        width: 200px;
+        height: auto;
+        flex-grow: 1;
+    }
+    .blockvideo__desvanecedor::before {
+        background: linear-gradient(to right, #000e 10%, transparent, #000e 45%);
+    }
+}
+
+@media (max-width: 635px) {
+    .blockvideo__desvanecedor {
+        align-items: center;
+    }
+
+    .blockvideo__item {
+        width: 100px;
+        height: auto;
+        flex-grow: 1;
+    }
+    .blockvideo__desvanecedor::before {
+        background: linear-gradient(to right, #000e 5%, transparent, #000e 25%);
+    }
+}
+
 
 
 /*Seccion*/
@@ -232,8 +272,5 @@ span{
 .piepagina__subcaja:first-child{
     border-left: none;
 }
-
-
-
 
 
