@@ -22,3 +22,4 @@ let currentOrder = 0; // Mantiene el índice del video actual
 
     // Inicializa el orden
     updateVideoOrder();
+

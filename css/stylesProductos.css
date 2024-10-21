@@ -2,15 +2,15 @@ body, html{
     margin: 0;
     padding: 0;
     height: 100%;
-    background: linear-gradient(#A76285, #FDCA9B);
-    color: white;    
+    background: linear-gradient(to bottom, #ffd7be 0%, #ffffff 50%, #b2e6ce 100%);
+    color: black;    
     overflow-x: hidden;
     font-family: nonito;
 }
 
 /*Barra de navegacion*/
 .navbar {
-    background: linear-gradient(to right,  #fad97df1, #ccc);
+    background: linear-gradient(to right,  #fad97df1, #06ebb2a6);
     width: 100vw;
     min-height: 100px;
     border-width: 3px;
@@ -60,8 +60,7 @@ body, html{
 .titulo{
     margin: 20px;
 }
-span{
-    
+span{   
     font-family: cursiva;
     font-weight: 800;
     font-size: 2.5em;
@@ -120,6 +119,7 @@ span{
     flex-wrap: wrap;
     max-width: 100%;
     gap: 20px;
+    justify-content: center;
 
     
 }
@@ -128,7 +128,7 @@ span{
     font-family: nonito;
     font-weight: 700;
     font-size: 1.8em;
-    color:wheat;
+    color:rgb(192, 80, 108);
     display: flex;
     flex-flow: column wrap;
     border: 3px solid black;

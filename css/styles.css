@@ -2,15 +2,15 @@ body, html{
     margin: 0;
     padding: 0;
     height: 100%;
-    background: linear-gradient(#A76285, #FDCA9B);
-    color: white;    
+    background: linear-gradient(to bottom, #ffd7be 0%, #ffffff 50%, #b2e6ce 100%);
+    color: black;    
     overflow-x: hidden;
     font-family: nonito;
 }
 
 /*Barra de navegacion*/
 .navbar {
-    background: linear-gradient(to right,  #fad97df1, #ccc);
+    background: linear-gradient(to right,  #fad97df1, #06ebb2a6);
     width: 100vw;
     min-height: 100px;
     border-width: 3px;
