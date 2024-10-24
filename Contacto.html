@@ -41,22 +41,27 @@
         <form id="contact">
             <div class="inputt">
                 <input type="text" id="name" placeholder="Nombre y apellido" required>
+                <span id="nombreError" class="error"></span>
             </div>
             <div class="inputt">
-                <input type="email" id="email" required placeholder="Correo electrónico">                
+                <input type="email" id="email" required placeholder="Correo electrónico"> 
+                <span id="emailError" class="error"></span>                
             </div>
 
             <div class="inputt">
-                <input type="tel" id="numero" placeholder="Teléfono" required>                
+                <input type="tel" id="numero" placeholder="Teléfono" required> 
+                <span id="numeroError" class="error"></span>                  
             </div>
     
             <div class="inputt">
-                <input type="text" id="asunto" placeholder="Asunto" required>                
+                <input type="text" id="asunto" placeholder="Asunto" required>     
+                <span id="asuntoError" class="error"></span>            
             </div>
     
             <div class="inputt">
                 <textarea id="message" placeholder="Escribe tu mensaje..." required></textarea>
                 <div class="err"></div>
+                <span id="mensajeError" class="error"></span>
             </div>
     
             <button type="submit">Enviar mensaje</button>

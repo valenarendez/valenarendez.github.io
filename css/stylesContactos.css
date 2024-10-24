@@ -57,8 +57,6 @@ body{
     left: 0;
 }
 
-/*FORMULARIO*/
-
 .contactanos {
     display: flex;
     flex-direction: row;
@@ -73,7 +71,7 @@ body{
     
 }
 
-/* Estilos para la información de contacto */
+/*información de contacto */
 .info {    
     display: flex;
     flex-direction: column;
@@ -129,7 +127,7 @@ body{
     background-color: #1da1f2; 
 }
 
-/* Estilos para el formulario */
+/*formulario */
 form {
     display: flex;
     min-width: 200px;
@@ -182,7 +180,17 @@ button:hover {
     form{
         overflow: hidden;
     }
-
-
     
+}
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.mensajeTemporal {
+    color: #a1f1d7;
+    font-size: 1.1rem;
+    border: 1px solid #06ebb2a6;
+    padding: 10px;
+    margin-top: 20px;
 }
