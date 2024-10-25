@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/stylesContactos.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <script src="/js/validacion.js" defer></script>
 
 </head>
 <body>
@@ -37,38 +38,29 @@
                 <a href="https://twitter.com" target="_blank"><img src="Imagenes/contacto/logotipos.png" alt="twitter"> </a>
             </div>
         </div>
-    
         <form id="contact">
             <div class="inputt">
-                <input type="text" id="name" placeholder="Nombre y apellido" required>
-                <span id="nombreError" class="error"></span>
+                <input type="text" id="name" placeholder="Nombre y apellido">
+                <span id="nameError" class="error"></span>
             </div>
             <div class="inputt">
-                <input type="email" id="email" required placeholder="Correo electrónico"> 
-                <span id="emailError" class="error"></span>                
+                <input type="email" id="email" placeholder="Correo electrónico">
+                <span id="emailError" class="error"></span>
             </div>
-
             <div class="inputt">
-                <input type="tel" id="numero" placeholder="Teléfono" required> 
-                <span id="numeroError" class="error"></span>                  
+                <input type="tel" id="numero" placeholder="Teléfono">
+                <span id="numeroError" class="error"></span>
             </div>
-    
             <div class="inputt">
-                <input type="text" id="asunto" placeholder="Asunto" required>     
-                <span id="asuntoError" class="error"></span>            
+                <input type="text" id="asunto" placeholder="Asunto">
+                <span id="asuntoError" class="error"></span>
             </div>
-    
             <div class="inputt">
-                <textarea id="message" placeholder="Escribe tu mensaje..." required></textarea>
-                <div class="err"></div>
-                <span id="mensajeError" class="error"></span>
+                <textarea id="message" placeholder="Escribe tu mensaje..."></textarea>
+                <span id="messageError" class="error"></span>
             </div>
-    
             <button type="submit">Enviar mensaje</button>
         </form>
 
-       </div>
-
-       <script src="validacion.js"></script>
 </body>
 </html>

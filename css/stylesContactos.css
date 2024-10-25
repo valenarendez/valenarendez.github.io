@@ -5,8 +5,6 @@ body{
     background-attachment:fixed;
     font-family: nonito;
     margin: 0;
-     
-
     }
     
 
@@ -182,10 +180,6 @@ button:hover {
     }
     
 }
-.error {
-    color: red;
-    font-size: 0.9rem;
-}
 
 .mensajeTemporal {
     color: #a1f1d7;
@@ -193,4 +187,32 @@ button:hover {
     border: 1px solid #06ebb2a6;
     padding: 10px;
     margin-top: 20px;
+}
+
+.inputt {
+    position: relative;
+    margin-bottom: 20px;
+    width: 95%;
+}
+
+.error {
+    color: red;
+    font-size: 1.2rem;
+    margin: 5px 10px;
+    display: block;
+}
+
+.error-border {
+    border: 2px solid red !important;
+}
+
+.mensajeExito {
+    color: green;
+    font-size: 1.2rem;
+    border: 2px solid green;
+    padding: 10px;
+    margin: 20px 10px;
+    background-color: #e6ffe6;
+    border-radius: 5px;
+    width: 90%;
 }

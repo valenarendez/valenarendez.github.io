@@ -1,79 +1,91 @@
-document.getElementById("contact").addEventListener("submit", function (enviar) {
+document.getElementById("contact").addEventListener("submit", function(enviar) {
     enviar.preventDefault();
     let errores = false;
 
-    const nombre = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const numero = document.getElementById("numero").value.trim();
-    const asunto = document.getElementById("asunto").value.trim();
-    const mensaje = document.getElementById("message").value.trim();
-
-    document.getElementById("nombreError").textContent = "";
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("numeroError").textContent = "";
-    document.getElementById("asuntoError").textContent = "";
-    document.getElementById("mensajeError").textContent = "";
-
-    if (nombre === "") {
-        document.getElementById("nombreError").textContent = "El nombre completo es obligatorio.";
-        errores = true;
-    } else if (nombre.length > 50) {
-        document.getElementById("nombreError").textContent = "El nombre no puede exceder 50 caracteres.";
-        errores = true;
+    function limpiarErrores() {
+        document.querySelectorAll(".error").forEach(error => error.textContent = "");
+        document.querySelectorAll("input, textarea").forEach(campo => campo.classList.remove("error-border"));
     }
 
-    if (email !== "") {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            document.getElementById("emailError").textContent = "El formato de correo es inválido.";
-            errores = true;
+    function mostrarError(campoId, mensaje) {
+        const campo = document.getElementById(campoId);
+        const errorSpan = document.getElementById(campoId + "Error");
+        if (errorSpan) {
+            errorSpan.textContent = mensaje;
+            campo.classList.add("error-border");
         }
-    } else {
-        document.getElementById("emailError").textContent = "El correo electrónico es obligatorio.";
-        errores = true;
     }
 
-    const numeroRegex = /^[0-9]{10}$/;
-    if (numero === "") {
-        document.getElementById("numeroError").textContent = "El número de teléfono es obligatorio.";
-        errores = true;
-    } else if (!numeroRegex.test(numero)) {
-        document.getElementById("numeroError").textContent = "El número de teléfono debe tener 10 dígitos.";
-        errores = true;
-    }
 
-    if (asunto === "") {
-        document.getElementById("asuntoError").textContent = "El asunto es obligatorio.";
-        errores = true;
-    }
+    function mostrarMensajeExito() {
+        const mensajeExistente = document.querySelector(".mensajeExito");
+        if (mensajeExistente) {
+            mensajeExistente.remove();
+        }
 
-    if (mensaje === "") {
-        document.getElementById("mensajeError").textContent = "El mensaje es obligatorio.";
-        errores = true;
-    } else if (mensaje.length > 200) {
-        document.getElementById("mensajeError").textContent = "El mensaje no puede exceder 200 caracteres.";
-        errores = true;
-    }
-
-    if (!errores) {
         const mensajeDiv = document.createElement("div");
-        mensajeDiv.innerHTML = `
-            <h2>Datos Ingresados:</h2>
-            <strong>Nombre Completo:</strong> ${nombre}<br>
-            <strong>Correo Electrónico:</strong> ${email}<br>
-            <strong>Teléfono:</strong> ${numero}<br>
-            <strong>Asunto:</strong> ${asunto}<br>
-            <strong>Mensaje:</strong> ${mensaje}
-        `;
-        mensajeDiv.style.border = "2px solid green";
-        mensajeDiv.style.padding = "10px";
-        mensajeDiv.style.marginTop = "20px";
-        form.appendChild(mensajeDiv);
+        mensajeDiv.textContent = "¡Formulario enviado con éxito!";
+        mensajeDiv.classList.add("mensajeExito");
+        document.getElementById("contact").appendChild(mensajeDiv);
 
         setTimeout(() => {
             mensajeDiv.remove();
-        }, 15000);
+        }, 5000);
+    }
 
+
+    limpiarErrores();
+
+    const campos = {
+        name: {
+            valor: document.getElementById("name").value.trim(),
+            regex: /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ\s]{3,15}$/,
+            mensaje: "El nombre debe tener entre 3 y 15 letras sin números.",
+            nombre: "nombre" // Agregamos esta propiedad para el mensaje personalizado
+        },
+        email: {
+            valor: document.getElementById("email").value.trim(),
+            regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            mensaje: "El formato de correo es inválido.",
+            nombre: "correo electrónico"
+        },
+        numero: {
+            valor: document.getElementById("numero").value.trim(),
+            regex: /^[0-9]{10}$/,
+            mensaje: "El número de teléfono debe tener 10 dígitos.",
+            nombre: "número de teléfono"
+        },
+        asunto: {
+            valor: document.getElementById("asunto").value.trim(),
+            regex: /[A-Za-z]/,
+            mensaje: "El asunto debe contener al menos una letra.",
+            nombre: "asunto"
+        },
+        message: {
+            valor: document.getElementById("message").value.trim(),
+            maxLength: 200,
+            mensaje: "El mensaje no puede exceder 200 caracteres.",
+            nombre: "mensaje"
+        }
+    };
+    
+
+    for (const [id, campo] of Object.entries(campos)) {
+        if (campo.valor === "") {
+            mostrarError(id, `El ${campo.nombre} es obligatorio.`);
+            errores = true;
+        } else if (campo.regex && !campo.regex.test(campo.valor)) {
+            mostrarError(id, campo.mensaje);
+            errores = true;
+        } else if (id === 'message' && campo.valor.length > campo.maxLength) {
+            mostrarError(id, campo.mensaje);
+            errores = true;
+        }
+    }
+
+
+    if (!errores) {
+        mostrarMensajeExito();
         document.getElementById("contact").reset();
     }
 });
