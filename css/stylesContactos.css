@@ -216,3 +216,56 @@ button:hover {
     border-radius: 5px;
     width: 90%;
 }
+
+.datos-enviados {
+    background-color: #ffffff;
+    border: 2px solid #06ebb2a6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 10px;
+    position: relative;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.datos-enviados h2 {
+    color: #0a8f46;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.datos-enviados ul {
+    list-style: none;
+    padding: 0;
+}
+
+.datos-enviados li {
+    margin: 10px 0;
+    font-size: 1.4em;
+}
+
+.datos-enviados strong {
+    color: #0051ff;
+    margin-right: 10px;
+}
+
+.cerrar-datos {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0051;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0;
+    line-height: 30px;
+    text-align: center;
+}
+
+.cerrar-datos:hover {
+    background-color: #cc0040;
+}

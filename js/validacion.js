@@ -16,8 +16,44 @@ document.getElementById("contact").addEventListener("submit", function(enviar) {
         }
     }
 
+    function crearSeccionDatos(datos) {
+        
+        const seccionAnterior = document.querySelector(".datos-enviados");
+        if (seccionAnterior) {
+            seccionAnterior.remove();
+        }
 
-    function mostrarMensajeExito() {
+
+        const seccion = document.createElement("div");
+        seccion.className = "datos-enviados";
+        
+        const titulo = document.createElement("h2");
+        titulo.textContent = "Datos Enviados";
+        seccion.appendChild(titulo);
+
+        const lista = document.createElement("ul");
+        for (const [campo, valor] of Object.entries(datos)) {
+            const item = document.createElement("li");
+            const label = document.createElement("strong");
+            label.textContent = `${campo}: `;
+            item.appendChild(label);
+            item.appendChild(document.createTextNode(valor));
+            lista.appendChild(item);
+        }
+        seccion.appendChild(lista);
+
+
+        const botonCerrar = document.createElement("button");
+        botonCerrar.textContent = "×";
+        botonCerrar.className = "cerrar-datos";
+        botonCerrar.onclick = () => seccion.remove();
+        seccion.appendChild(botonCerrar);
+
+
+        document.getElementById("contact").after(seccion);
+    }
+
+    function mostrarMensajeExito(datos) {
         const mensajeExistente = document.querySelector(".mensajeExito");
         if (mensajeExistente) {
             mensajeExistente.remove();
@@ -28,11 +64,12 @@ document.getElementById("contact").addEventListener("submit", function(enviar) {
         mensajeDiv.classList.add("mensajeExito");
         document.getElementById("contact").appendChild(mensajeDiv);
 
+        crearSeccionDatos(datos);
+
         setTimeout(() => {
             mensajeDiv.remove();
         }, 5000);
     }
-
 
     limpiarErrores();
 
@@ -41,7 +78,7 @@ document.getElementById("contact").addEventListener("submit", function(enviar) {
             valor: document.getElementById("name").value.trim(),
             regex: /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ\s]{3,15}$/,
             mensaje: "El nombre debe tener entre 3 y 15 letras sin números.",
-            nombre: "nombre" // Agregamos esta propiedad para el mensaje personalizado
+            nombre: "nombre"
         },
         email: {
             valor: document.getElementById("email").value.trim(),
@@ -68,7 +105,6 @@ document.getElementById("contact").addEventListener("submit", function(enviar) {
             nombre: "mensaje"
         }
     };
-    
 
     for (const [id, campo] of Object.entries(campos)) {
         if (campo.valor === "") {
@@ -83,9 +119,15 @@ document.getElementById("contact").addEventListener("submit", function(enviar) {
         }
     }
 
-
     if (!errores) {
-        mostrarMensajeExito();
+        const datosEnviados = {
+            "Nombre": campos.name.valor,
+            "Correo": campos.email.valor,
+            "Teléfono": campos.numero.valor,
+            "Asunto": campos.asunto.valor,
+            "Mensaje": campos.message.valor
+        };
+        mostrarMensajeExito(datosEnviados);
         document.getElementById("contact").reset();
     }
 });
